@@ -1,0 +1,12 @@
+{
+  "name": "hello-world-website",
+  "version": "1.0.0",
+  "description": "我的第一个AI开发的Node.js网站",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
