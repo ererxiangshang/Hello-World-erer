@@ -79,6 +79,13 @@ app.get('/', (req, res) => {
   `);
 });
 
-app.listen(PORT, () => {
-  console.log(`服务器已启动！访问地址：http://localhost:${PORT}`);
-});
+// 本地开发时才启动服务器
+if (require.main === module) {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`服务器已启动！访问地址：http://localhost:${PORT}`);
+  });
+}
+
+// 导出app给Vercel Serverless使用
+module.exports = app;
